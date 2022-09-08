@@ -2,11 +2,7 @@ body {
     background-color: beige;
 }
 
-.zIndex {
-    z-index: -10;
-}
-
-@media (min-width: 820px) {
+@media (min-width: 890px) {
     ion-icon {
         color: #464646;
         font-size: 30px;
@@ -52,15 +48,24 @@ ion-icon:hover {
     align-items: center;
     margin: 10px;
     padding: 10px;
-   
 }
 
 .div-detail{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
+.div-properties{ 
+    display: flex;
+    align-items: center;
+}
 .font-ty{ 
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
+    color: black;
+}
+
+.zIndex {
+    z-index: -10;
 }

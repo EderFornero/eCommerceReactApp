@@ -85,7 +85,7 @@ div{
     color: black;
     display: block;
   }
-  @media (min-width: 890px) { 
+  @media (min-width: 961px) { 
     margin: 0px;
     position: initial;
     a{
@@ -112,7 +112,7 @@ div{
     }
   }
 .menu{ 
-  @media (min-width: 890px){
+  @media (min-width: 961px){
     display: none;
   }
 }

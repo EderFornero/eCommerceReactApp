@@ -7,29 +7,35 @@ import { CardActionArea, Card, CardContent, CardMedia, Typography } from '@mui/m
 
 const CardItem = ({ data }) => {
     return (
-        <Card sx={{ maxWidth: 300, height: 600 }} className="zIndex card-detail">
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    image={data.img}
-                    alt="green iguana"
-                />
-                <CardContent>
-                    <p className="font-ty" >
-                        Name: {data.name}
-                    </p>
-                    <p className="font-ty" >
-                        Birthday: {data.birthday}
-                    </p>
-                    <p className="font-ty" >
-                        Occupation: {data.occupation}
-                    </p>
-                    <p className="font-ty" >
-                        Portrayed: {data.portrayed}
-                    </p>
-                </CardContent>
-            </CardActionArea>
-        </Card>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alingContent: 'center' }}>
+            <Card sx={{ maxWidth: 300, backgroundColor: 'beige' }} className="zIndex card-detail">
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        image={data.img}
+                        alt="green iguana"
+                    />
+                </CardActionArea>
+            </Card>
+            <div className='div-properties'> 
+                <Card sx={{ maxWidth: 300, border: 'solid 1px black', backgroundColor: 'gray'}} className="zIndex card-detail">
+                    <CardContent>
+                        <p className="font-ty" >
+                            <h5 style={{textDecoration: 'underline'}}>Name:</h5>{data.name}
+                        </p>
+                        <p className="font-ty" >
+                            <h5 style={{textDecoration: 'underline'}}>Birthday:</h5>{data.birthday}
+                        </p>
+                        <p className="font-ty" >
+                            <h5 style={{textDecoration: 'underline'}}>Occupation:</h5>{data.occupation}
+                        </p>
+                        <p className="font-ty" >
+                            <h5 style={{textDecoration: 'underline'}}>Portrayed:</h5>{data.portrayed}
+                        </p>
+                    </CardContent>
+                </Card>
+            </div>
+        </div>
     );
 }
 
