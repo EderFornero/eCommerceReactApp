@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../../App.css'
 
 function ItemCount() {
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(1);
 
     const addNumber = () => {
         setCounter(counter + 1)
@@ -10,19 +10,21 @@ function ItemCount() {
     }
     const subtractCounter = () => {
         // counter > 1 ? setCounter(counter - 1) : null; 
-        if (counter > 0) {
+        if (counter > 1) {
             setCounter(counter - 1)
         }
     }
 
     return (
         <>
-            <div className='container my-5'>
-                <div className='text-center my-5'>
-                    <div className='underline'><h2>Products In Cart</h2></div>
-                    <div className='my-4'><h5>= {counter}</h5></div>
-                    <button className='btn btn-success mx-3' onClick={addNumber}>ADD</button>
-                    <button className='btn btn-danger mx-3' onClick={subtractCounter}>SUBTRACT</button>
+            <div className='div-cart'>
+                <div className='container my-5'>
+                    <div className='text-center my-5'>
+                        <div className='underline'><h4>Products In Cart</h4></div>
+                        <div className='my-4'><h5>{counter}</h5></div>
+                        <button className='btn btn-success mx-3' onClick={addNumber}>ADD</button>
+                        <button className='btn btn-danger mx-3' onClick={subtractCounter}>SUBTRACT</button>
+                    </div>
                 </div>
             </div>
         </>

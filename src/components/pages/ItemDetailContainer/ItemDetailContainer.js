@@ -7,7 +7,7 @@ import { useParams } from 'react-router'
 
 
 //Card
-import CardItemDetail from '../../Card/CardItemDetail'
+import ItemDetail from '../../Card/ItemDetail'
 
 
 function ItemDetailContainer() {
@@ -31,10 +31,11 @@ function ItemDetailContainer() {
         {user.map((user) => {
           return (
             <div className='div-detail'>
-              <CardItemDetail data={user} />
+              <ItemDetail data={user} />
             </div>
           )
         })}
+     
 
       </div>
 
