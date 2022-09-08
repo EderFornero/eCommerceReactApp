@@ -9,7 +9,7 @@ import styled from 'styled-components'
 
 //Components
 import NavbarButton from './NavbarButton'
-import IconCart from "../IconCart/IconCart";
+import CartWidget from "../IconCart/IconCart";
 
 
 function Navbar() {
@@ -30,7 +30,7 @@ function Navbar() {
           <Link to="/watch">Wristlet-Watch</Link>
           <Link to="/handbag">Handbags</Link>
           <Link to="/fragance">Fragrances</Link>
-          <Link to=""><IconCart /></Link>
+          <Link to=""><CartWidget /></Link>
           
         </div>
         <div className='menu'>
