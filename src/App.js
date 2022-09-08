@@ -3,8 +3,6 @@ import './App.css';
 //REACT ROUTER DOM
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-//COMPONENTS
-import Counter from './components/Counter/Counter';
 //Nav
 import Navbar from './components/Header/Navbar';
 //Pages
@@ -27,7 +25,7 @@ function App() {
         <Route path="/handbag" element={<Handbag />} />
         <Route path="/detail/:id" element={<ItemDetailContainer />} />
       </Routes>
-      {/* <Counter /> */}
+
 
     </Router>
   );
