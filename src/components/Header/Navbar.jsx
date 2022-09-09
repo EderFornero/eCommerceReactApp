@@ -9,7 +9,7 @@ import styled from 'styled-components'
 
 //Components
 import NavbarButton from './NavbarButton'
-import CartWidget from "../IconCart/IconCart";
+import CartWidget from "../IconCart/CartWidget";
 
 
 function Navbar() {

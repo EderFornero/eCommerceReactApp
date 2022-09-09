@@ -13,13 +13,15 @@ import Handbag from './components/pages/Handbag';
 import ItemDetailContainer from './components/pages/ItemDetailContainer/ItemDetailContainer';
 
 
+
+
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/category/:status" element={<Home />} />
         <Route path="/fragance" element={<Fragance />} />
         <Route path="/watch" element={<Watch />} />
         <Route path="/handbag" element={<Handbag />} />
