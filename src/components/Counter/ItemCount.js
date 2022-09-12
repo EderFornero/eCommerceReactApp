@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import '../../App.css'
 
-function ItemCount() {
-    const [counter, setCounter] = useState(1);
+//Mui
+import { Button } from '@mui/material'
+
+function ItemCount({ initial, stock, onAdd }) {
+    const [counter, setCounter] = useState(initial);
 
     const addNumber = () => {
         setCounter(counter + 1)
-        if (counter > 4) { alert("¡Tu contador ha llegado a 5!") }
     }
     const subtractCounter = () => {
         // counter > 1 ? setCounter(counter - 1) : null; 
@@ -22,8 +24,11 @@ function ItemCount() {
                     <div className='text-center my-5'>
                         <div className='underline'><h4>Products In Cart</h4></div>
                         <div className='my-4'><h5>{counter}</h5></div>
-                        <button className='btn btn-success mx-3' onClick={addNumber}>ADD</button>
-                        <button className='btn btn-danger mx-3' onClick={subtractCounter}>SUBTRACT</button>
+                        <button disabled={counter >= stock} className='btn btn-success mx-3' onClick={addNumber}>ADD</button>
+                        <button disabled={counter <= 1} className='btn btn-danger mx-3' onClick={subtractCounter}>SUBTRACT</button>
+                        <Button disable={stock <= 0} onClick={() => onAdd(counter)} variant="contained" component="label">
+                            Add to Cart
+                        </Button>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,26 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import '../../App.css'
+
 
 //MUI
 import { CardActionArea, Card, CardContent, CardMedia, Typography } from '@mui/material';
 
 //COUNTER
 import ItemCount from '../Counter/ItemCount'
+import { Link } from 'react-router-dom';
 
 
 const CardItem = ({ data }) => {
+
+    //Logic add to cart
+
+    const [goToCart, setGoToCart] = useState(false);
+
+    const onAdd = (quantity) =>{ 
+        setGoToCart(true); 
+    }
+
+
     return (
 
         <div style={{
@@ -31,8 +43,12 @@ const CardItem = ({ data }) => {
                     </CardActionArea>
 
                 </Card>
-                <ItemCount />
+                {
+                    goToCart ? <Link to="/cart" style={{color: 'rgb(48, 190, 48)', textDecoration: 'none', fontFamily: 'Arial', fontSize: 'large'}}>Finalizar Compra</Link> : <ItemCount initial={1} stock={8} onAdd={onAdd} />
+                }
             </div>
+
+
 
             <div className='div-properties'>
                 <Card sx={{
