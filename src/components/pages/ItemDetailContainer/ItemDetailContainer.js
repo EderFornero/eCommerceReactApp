@@ -9,8 +9,8 @@ import { useParams } from 'react-router'
 //Card
 import ItemDetail from '../../Card/ItemDetail'
 
-//Counter
-import ItemCount from '../../Counter/ItemCount'
+
+
 
 
 function ItemDetailContainer() {
@@ -38,7 +38,7 @@ function ItemDetailContainer() {
             </div>
           )
         })}
-        <ItemCount />
+       
 
       </div>
 
