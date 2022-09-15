@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <>
       <Nav>
-      <Link to='/home' className='font-header'><h2>Beauty <span>&</span> Elegance</h2></Link>
+      <Link to='/home' className='font-header' style={{zIndex: 2}}><h2>Beauty <span>&</span> Elegance</h2></Link>
 
 
         <div className={`items ${clicked ? 'active' : ''}`}>
@@ -73,6 +73,7 @@ div{
 }
 .items{ 
   position: absolute;
+  z-index: 2;
   top: -700px;
   left: -1000px;
   margin-left: auto;
@@ -112,6 +113,7 @@ div{
     }
   }
 .menu{ 
+  z-index: 2;
   @media (min-width: 961px){
     display: none;
   }
@@ -126,6 +128,7 @@ const BackgroundMenu = styled.div`
       transition: all 1.2s ease;
       z-index: -1;
         &.active{
+          z-index: 1;
           border-radius: 0 0 75% 0;
           top: 0;
           left: 0;
