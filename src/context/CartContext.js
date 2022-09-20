@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 
 const CartContext = React.createContext([]);
@@ -13,6 +13,7 @@ function CartProvider({ children }) {
 
     const [cart, setCart] = useState([]);
 
+
     //add product to cart
     const addProduct = (item, quantity) => {
         let replaceCart;
@@ -26,7 +27,7 @@ function CartProvider({ children }) {
         setCart(replaceCart);
     }
 
-    console.log('carrito :', cart);
+ 
 
 
     //clear cart
@@ -53,7 +54,7 @@ function CartProvider({ children }) {
     }
 
     const totalProducts = () => {
-        cart.reduce((acc, product) => acc + product.quantity, 0);
+       return cart.reduce((acc, product) => acc + product.quantity, 0);
         //acc = acumulador de productos a medida que se van agregando (suma) 
         //product = cantidad de un mismo producto seleccionada
         //0 = valor inicial de acc

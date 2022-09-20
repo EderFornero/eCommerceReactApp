@@ -11,8 +11,8 @@ function IconCart() {
 
     return (
         <>
-         <span>{totalProducts !== 0 ? totalProducts() : ''}</span>
         <Link to="/cart"><ion-icon className='move-cart' name="cart-outline"></ion-icon></Link>
+        <span>{totalProducts !== 0 ? totalProducts() : ''}</span>
         </>
     )
 }
