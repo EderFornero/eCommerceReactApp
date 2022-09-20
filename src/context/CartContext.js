@@ -41,9 +41,31 @@ function CartProvider({ children }) {
         return setCart(cart.filter(product => product.id !== id))
     }
 
+    //total price 
+
+    const totalPrice = () => {
+        return cart.reduce((acc, add) => acc + add.quantity * add.price, 0);
+
+        //acc = acumulador de objetos seleccionados 
+        //add = multiplicar cantidad de objetos con el precio
+        //0 = valor inicial de acc
+        //retorna el precio total 
+    }
+
+    const totalProducts = () => {
+        cart.reduce((acc, product) => acc + product.quantity, 0);
+        //acc = acumulador de productos a medida que se van agregando (suma) 
+        //product = cantidad de un mismo producto seleccionada
+        //0 = valor inicial de acc
+    }
+
+
+
+
+
     return (
 
-        <CartContext.Provider value={{ clearCart, inCart, removeProductInCart, addProduct}}>
+        <CartContext.Provider value={{ clearCart, inCart, removeProductInCart, addProduct, totalPrice, totalProducts }}>
             {children}
         </CartContext.Provider>
 

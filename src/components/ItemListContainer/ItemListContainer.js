@@ -16,7 +16,7 @@ function ItemListContainer() {
 
     useEffect(() => {
 
-        axios.get('https://breakingbadapi.com/api/characters')
+        axios.get('https://api.escuelajs.co/api/v1/products')
             .then(res => setUsers(res.data))
 
     }, [])
@@ -27,8 +27,8 @@ function ItemListContainer() {
 
             {users.map((users) => {
                 return (
-                    <div key={users.char_id} >
-                        <Link to={`/detail/${users.char_id}`} style={{ textDecoration: 'none' }}><CardItem data={users} /></Link>
+                    <div key={users.id} >
+                        <Link to={`/detail/${users.id}`} style={{ textDecoration: 'none' }}><CardItem data={users} /></Link>
                     </div>
                 )
             })}
