@@ -16,7 +16,7 @@ import ItemDetail from '../../Card/ItemDetail'
 function ItemDetailContainer() {
 
   const [user, setUser] = useState({})
-  console.log(user)
+
   let { id } = useParams();
 
 
@@ -29,12 +29,18 @@ function ItemDetailContainer() {
   
   return (
   
- 
-      <>
     
-      
+      <div>
+        {user.map((user) => {
+          return (
+            <div className='div-detail'>
+              <ItemDetail data={user} />
+            </div>
+          )
+        })}
+       
 
-      </>
+      </div>
 
   )
 
