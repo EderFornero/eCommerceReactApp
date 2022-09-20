@@ -11,15 +11,15 @@ const CardItem = ({ data }) => {
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    image={data.category.image}
+                    image={data.img}
                     alt="green iguana"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {data.title}
+                        {data.nickname}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                       $ {data.price}
+                        {data.status}
                     </Typography>
                 </CardContent>
             </CardActionArea>

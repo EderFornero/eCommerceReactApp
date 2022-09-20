@@ -15,7 +15,7 @@ import ItemDetail from '../../Card/ItemDetail'
 
 function ItemDetailContainer() {
 
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState([])
 
   let { id } = useParams();
 
@@ -23,7 +23,7 @@ function ItemDetailContainer() {
 
   useEffect(() => {
 
-    axios(`https://api.escuelajs.co/api/v1/products/${id}`).then((res) => setUser(res.data)
+    axios(`https://breakingbadapi.com/api/characters/${id}`).then((res) => setUser(res.data)
     );
   }, [id])
   

@@ -16,6 +16,8 @@ import ItemDetailContainer from './components/pages/ItemDetailContainer/ItemDeta
 //CartContext
 
 import CartProvider from './context/CartContext';
+import InCart from './components/InCart/InCart';
+
 
 
 
@@ -31,6 +33,7 @@ function App() {
           <Route path="/watch" element={<Watch />} />
           <Route path="/handbag" element={<Handbag />} />
           <Route path="/detail/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<InCart />} />
         </Routes>
       </CartProvider>
 

@@ -73,6 +73,30 @@ ion-icon:hover {
     left: 100px;
 }
 
+.cartView{ 
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.emptyCart{ 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.goShop{ 
+    text-decoration: none;
+    color: blue;
+}
+.goShop:hover{ 
+    text-decoration: underline;
+}
+
 .zIndex {
     z-index: -10;
 }
+
+
