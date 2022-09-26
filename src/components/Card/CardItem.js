@@ -16,7 +16,7 @@ const CardItem = ({ data }) => {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {data.nickname}
+                        {data.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         {data.status}

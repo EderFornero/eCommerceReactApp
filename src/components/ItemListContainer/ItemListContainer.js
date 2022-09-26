@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 
+//firebase
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 //ROUTER
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 //Components
 import CardItem from '../Card/CardItem'
@@ -12,14 +13,21 @@ import '../../App.css'
 function ItemListContainer() {
 
     const [users, setUsers] = useState([]);
-   
+    const { categoryId } = useParams();
 
     useEffect(() => {
+        const getStore = getFirestore();
+        const selectCollection = collection(getStore, 'products');
+        if (categoryId) {
+            const category = query(selectCollection, where('category', '==', categoryId))
+            getDocs(category)
+                .then(res => setUsers(res.docs.map(products => ({ id: products.id, ...products.data() }))))
+        } else {
+            getDocs(selectCollection)
+                .then(res => setUsers(res.docs.map(products => ({ id: products.id, ...products.data() }))))
+        }
 
-        axios.get('https://breakingbadapi.com/api/characters')
-            .then(res => setUsers(res.data))
-
-    }, [])
+    }, [categoryId])
 
     return (
 
@@ -27,8 +35,8 @@ function ItemListContainer() {
 
             {users.map((users) => {
                 return (
-                    <div key={users.char_id} >
-                        <Link to={`/detail/${users.char_id}`} style={{ textDecoration: 'none' }}><CardItem data={users} /></Link>
+                    <div key={users.id} >
+                        <Link to={`/detail/${users.id}`} style={{ textDecoration: 'none' }}><CardItem data={users} /></Link>
                     </div>
                 )
             })}

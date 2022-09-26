@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+
+//css
 import '../../../App.css'
+
+//firebase
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 //React router dom
 import { useParams } from 'react-router'
-
 
 //Card
 import ItemDetail from '../../Card/ItemDetail'
@@ -22,27 +25,15 @@ function ItemDetailContainer() {
 
 
   useEffect(() => {
+    const getStore = getFirestore();
+    const selectDoc = doc(getStore, 'products', id);
+    getDoc(selectDoc).then(res => setUser({id: res.id, ...res.data()}))
 
-    axios(`https://breakingbadapi.com/api/characters/${id}`).then((res) => setUser(res.data)
-    );
-  }, [id])
+  }, [id]);
   
   return (
-  
-    
-      <div>
-        {user.map((user) => {
-          return (
-            <div className='div-detail'>
-              <ItemDetail data={user} />
-            </div>
-          )
-        })}
-       
-
-      </div>
-
-  )
+    <ItemDetail data={user} />
+  );
 
 
 

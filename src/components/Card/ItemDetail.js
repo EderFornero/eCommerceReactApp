@@ -42,26 +42,40 @@ const CardItem = ({ data }) => {
                     <CardActionArea>
                         <CardMedia
                             component="img"
-                            image={data.img}
+                            image={data.img_back}
                             alt="green iguana"
                         />
                     </CardActionArea>
 
                 </Card>
                 {
-                    goToCart ? <Link to="/cart" style={{ color: 'rgb(48, 190, 48)', textDecoration: 'none', fontFamily: 'Arial', fontSize: 'large' }}>Finalizar Compra</Link> : <ItemCount initial={1} stock={8} onAdd={onAdd} />
+                    goToCart ? <Link to="/cart" style={{ color: 'rgb(48, 190, 48)', textDecoration: 'none', fontFamily: 'Arial', fontSize: 'large' }}>CHECKOUT</Link> : <ItemCount initial={1} stock={8} onAdd={onAdd} />
                 }
             </div>
 
 
 
             <div className='div-properties'>
+                {/* <div class="card mb-3" style={{maxWidth: '540px'}}>
+                    <div class="row g-0">
+                        <CardMedia class="col-md-4">
+                            {data.img_back}
+                        </CardMedia>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{data.name}</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
                 <Card sx={{
                     maxWidth: 300,
                     border: 'solid 1px black',
                     backgroundColor: 'gray',
                     height: 400
-                }} className="zIndex card-detail">
+                }} className="zIndex card-detail card mb-3">
 
                     <CardContent>
                         <Typography>
