@@ -7,17 +7,17 @@ function InCart({ product }) {
     return (
         <div className='cartView'>
 
-            <img style={{ width: '300px', marginLeft: '300px', maxHeight: '20em'}} src={product.img} alt={product.portrayed}></img>
+            <img className='cartViewImg' src={product.img} alt={product.portrayed}></img>
 
-            <div style={{ marginLeft: '20px'}}>
+            <div className='cartViewDiv'>
                 <p>
-                    <h5 style={{ textDecoration: 'underline' }}>Product:</h5> <h6>{product.nickname}</h6>
+                    <h5 style={{ textDecoration: 'underline' }}>Product:</h5> <h6>{product.name}</h6>
                 </p>
                 <p>
                     <h5 style={{ textDecoration: 'underline' }}>Units:</h5> <h6>{product.quantity}</h6>
                 </p>
                 <p>
-                    <h5 style={{ textDecoration: 'underline' }}>Price:</h5> <h6>10 {product.price}</h6>
+                    <h5 style={{ textDecoration: 'underline' }}>Price:</h5> <h6>${product.price}</h6>
                 </p>
                 <p>
                     <h5 style={{ textDecoration: 'underline' }}>Total:</h5> <h6>${product.quantity * product.price}</h6>

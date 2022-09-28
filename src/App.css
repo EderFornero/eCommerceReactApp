@@ -25,6 +25,28 @@ ion-icon:hover {
 
 }
 
+.ul-category {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.li-category {
+    margin: 10px;
+}
+
+.nav_link:hover {
+    color: black;
+    border-radius: 5px;
+    background-color: #ece4a4;
+    transition: all .8s;
+}
+
+
+
 .divCardItem {
     display: flex;
     align-items: center;
@@ -40,46 +62,77 @@ ion-icon:hover {
     align-items: center;
     margin: 5px;
     text-decoration: none;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.card-detail{ 
+.card-detail {
     display: flex;
     align-items: center;
     margin: 10px;
     padding: 10px;
 }
 
-.div-detail{
+.div-detail {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.div-properties{ 
+.div-properties {
     display: flex;
     align-items: flex-start;
 }
-.font-ty{ 
+
+.font-ty {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     color: black;
 }
 
-.div-cart{
+.div-cart {
     display: flex;
-    position: relative; 
+    position: relative;
     bottom: 80px;
     left: 100px;
 }
 
-.cartView{ 
+.cartView {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.emptyCart{ 
+.cartViewImg{ 
+    width: 300px;
+    margin-left: 300px;
+    max-height: 20em;
+}
+
+.cartViewDiv{ 
+    margin-right: 20px;
+    text-align: center;
+}
+
+@media (max-width: 1015px){ 
+    .cartView{
+        display: block;
+        align-items: center;
+        margin-right: 20px;
+    }
+    .cartViewImg{ 
+        object-fit: contain;
+        min-height: 50vh;
+        width: 100%;
+        margin-left: 10px;
+    }
+    .cartViewDiv{
+        margin-left: 20px;
+        background-color: beige;
+    }
+   
+}
+
+.emptyCart {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
     display: flex;
@@ -87,16 +140,21 @@ ion-icon:hover {
     margin-top: 20px;
 }
 
-.goShop{ 
+.goShop {
     text-decoration: none;
     color: blue;
 }
-.goShop:hover{ 
+
+.goShop:hover {
     text-decoration: underline;
+}
+
+.spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 .zIndex {
     z-index: -10;
 }
-
-

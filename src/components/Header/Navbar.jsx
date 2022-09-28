@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <>
       <Nav>
-      <Link to='/home' className='font-header' style={{zIndex: 2}}><h2>Beauty <span>&</span> Elegance</h2></Link>
+      <Link to='/home' className='font-header' style={{zIndex: 2}}><h2 style={{fontSize: '30px'}}>Beauty <span>&</span> Elegance</h2></Link>
 
 
         <div className={`items ${clicked ? 'active' : ''}`}>
@@ -67,6 +67,7 @@ div{
     text-decoration: none;
 }
   a:hover{
+    border-radius: 5px;
     background-color: beige;
     transition: .5s;
   }

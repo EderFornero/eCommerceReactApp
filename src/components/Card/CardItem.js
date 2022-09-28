@@ -7,7 +7,7 @@ import { CardActionArea, Card, CardContent, CardMedia, Typography } from '@mui/m
 
 const CardItem = ({ data }) => {
     return (
-        <Card sx={{ maxWidth: 300, height: 500, backgroundColor: 'gray' }} className="zIndex divCardItem">
+        <Card sx={{ maxWidth: 300, height: 500, backgroundColor: '#ece4a4' }} className="zIndex divCardItem">
             <CardActionArea>
                 <CardMedia
                     component="img"

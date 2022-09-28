@@ -7,6 +7,7 @@ import { collection, getDocs, getFirestore, query, where } from 'firebase/firest
 import { Link, useParams } from 'react-router-dom'
 
 //Components
+import Spinner from "../Spinner/Spinner"
 import CardItem from '../Card/CardItem'
 import '../../App.css'
 
@@ -14,8 +15,10 @@ function ItemListContainer() {
 
     const [users, setUsers] = useState([]);
     const { categoryId } = useParams();
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
+        setIsLoading(true)
         const getStore = getFirestore();
         const selectCollection = collection(getStore, 'products');
         if (categoryId) {
@@ -29,17 +32,23 @@ function ItemListContainer() {
 
     }, [categoryId])
 
+    setTimeout(() => {
+        setIsLoading(false)
+    }, 1000)
+
     return (
 
         <div className="divCardItem" >
+            {isLoading ? <Spinner style={{display: 'flex', justifyContent: 'center'}}/> :
+                users.map((users) => {
+                    return (
+                        <div key={users.id} >
+                            <Link to={`/detail/${users.id}`} style={{ textDecoration: 'none' }}><CardItem data={users} /></Link>
+                        </div>
+                    )
+                })}
 
-            {users.map((users) => {
-                return (
-                    <div key={users.id} >
-                        <Link to={`/detail/${users.id}`} style={{ textDecoration: 'none' }}><CardItem data={users} /></Link>
-                    </div>
-                )
-            })}
+
         </div>
     )
 }
