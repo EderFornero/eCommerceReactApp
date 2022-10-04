@@ -11,5 +11,5 @@
 
 # Dependencies
 
--- Firebase 
+[ ] Firebase 
 -- Axios (In a first moment, then I replaced it)
