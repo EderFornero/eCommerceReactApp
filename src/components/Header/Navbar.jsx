@@ -32,7 +32,7 @@ function Navbar() {
 
 
           <Link to="/"><HomeButton /></Link>
-          <Link to=""><Menu /></Link>
+          <a><Menu /></a>
           <Link to="/cart" className='cartWidget'><CartWidget /></Link>
 
         </div>

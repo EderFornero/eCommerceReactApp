@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import '../../App.css'
 
-//Mui
-import { Button } from '@mui/material'
 
 function ItemCount({ initial, stock, onAdd }) {
     const [counter, setCounter] = useState(initial);

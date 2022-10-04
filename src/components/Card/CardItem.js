@@ -18,8 +18,12 @@ const CardItem = ({ data }) => {
                     <Typography gutterBottom variant="h5" component="div">
                         {data.name}
                     </Typography>
+                    <br/>
                     <Typography variant="body2" color="text.secondary">
-                        {data.status}
+                       Stock: {data.status}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                       {data.water_resistance ? `Water resistance: ${data.water_resistance}` : null}
                     </Typography>
                 </CardContent>
             </CardActionArea>
