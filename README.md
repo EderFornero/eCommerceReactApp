@@ -1,15 +1,15 @@
 # I'm Eder!
 # Welcome to my firts project using React Js 
--- Coderhouse course 
+- [ ] Coderhouse course 
 
 # Libraries what I used
 
--- Bootstrap 
--- Material UI 
--- Tailwind 
--- react-hot-toast
+- [ ] Bootstrap 
+- [ ] Material UI 
+- [ ] Tailwind 
+- [ ] react-hot-toast
 
 # Dependencies
 
 - [ ] Firebase 
--- Axios (In a first moment, then I replaced it)
+- [ ] Axios (In a first moment, then I replaced it)
