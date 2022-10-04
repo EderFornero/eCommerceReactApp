@@ -8,3 +8,8 @@
 -- Material UI 
 -- Tailwind 
 -- react-hot-toast
+
+# Dependencies
+
+-- Firebase 
+-- Axios (In a first moment, then I replaced it)
