@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../../App.css'
 
-//MUI
-import { CardActionArea, Card, CardContent, CardMedia, Typography } from '@mui/material';
 
 //COUNTER
 import ItemCount from '../Counter/ItemCount'
@@ -28,60 +26,60 @@ const CardItem = ({ data }) => {
 
     return (
 
-        <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alingContent: 'center'
-        }}>
-            <div>
-                <Card sx={{
-                    maxWidth: 300,
-                    backgroundColor: '#ece4a4',
-                    height: 400
-                }} className="zIndex card-detail">
-                    <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            image={data.img_back}
-                            alt="green iguana"
-                        />
-                    </CardActionArea>
+        //     <div className='cartView'>
 
-                </Card>
-                {
-                    goToCart ? <Link to="/cart" style={{ color: 'rgb(48, 190, 48)', textDecoration: 'none', fontFamily: 'Arial', fontSize: 'large' }}>CHECKOUT</Link> : <ItemCount initial={1} stock={8} onAdd={onAdd} />
-                }
+        //     <img className='cartViewImg' src={product.img} alt={product.portrayed}></img>
+
+        //     <div className='cartViewDiv' style={{ marginTop: 15 }}>
+        //         <p>
+        //             <h5 style={{ textDecoration: 'underline', marginTop: 8 }}>Product:</h5> <h6>{product.name}</h6>
+        //         </p>
+        //         <p>
+        //             <h5 style={{ textDecoration: 'underline', marginTop: 8 }}>Units:</h5> <h6>{product.quantity}</h6>
+        //         </p>
+        //         <p>
+        //             <h5 style={{ textDecoration: 'underline', marginTop: 8 }}>Price:</h5> <h6>${product.price}</h6>
+        //         </p>
+        //         <p>
+        //             <h5 style={{ textDecoration: 'underline', marginTop: 8 }}>Total:</h5> <h6>${product.quantity * product.price}</h6>
+        //         </p>
+
+        //         <br />
+        //         <FontAwesomeIcon icon={faTrashCan} className='btn btn-danger mx-3' onClick={() => removeProductInCart(product.id)} />
+        //     </div>
+
+
+        // </div>
+
+        <div className='cartView'>
+
+            <img className='cartViewImg' src={data.img_back} alt={data.name}></img>
+
+
+            <div className='cartViewDiv' style={{ marginTop: 15 }}>
+                <p>
+                    <h5 style={{ textDecoration: 'underline', marginTop: 8 }}>Product:</h5> <h6>{data.name}</h6>
+                </p>
+                <p>
+                    <h5 style={{ textDecoration: 'underline', marginTop: 8 }}>For:</h5> <h6>{data.for}</h6>
+                </p>
+                <p>
+                    <h5 style={{ textDecoration: 'underline', marginTop: 8 }}>Size:</h5> <h6>{data.size}</h6>
+                </p>
+                <p>
+                    <h5 style={{ textDecoration: 'underline', marginTop: 8 }}>Made In:</h5> <h6>{data.made_in}</h6>
+                </p>
+
+
+                <div style={{marginTop: 15}}>
+                    {
+                        goToCart ? <Link to="/cart" style={{ color: '#dec92a', textDecoration: 'underline', fontFamily: 'Arial', fontSize: 'large' }}>CHECKOUT</Link> : <ItemCount initial={1} stock={8} onAdd={onAdd} />
+                    }
+                </div>
+                
+
             </div>
 
-
-
-            <div className='div-properties'>
-                <Card sx={{
-                    maxWidth: 300,
-                    border: 'solid 1px black',
-                    backgroundColor: '#ece4a4',
-                    height: 400
-                }} className="zIndex card-detail card mb-3">
-
-                    <CardContent>
-                        <Typography>
-                            <p className="font-ty" >
-                                <h5 style={{ textDecoration: 'underline' }}>Name:</h5>{data.name}
-                            </p>
-                            <p className="font-ty" >
-                                <h5 style={{ textDecoration: 'underline' }}>Birthday:</h5>{data.birthday}
-                            </p>
-                            <p className="font-ty" >
-                                <h5 style={{ textDecoration: 'underline' }}>Occupation:</h5>{data.occupation}
-                            </p>
-                            <p className="font-ty" >
-                                <h5 style={{ textDecoration: 'underline' }}>Portrayed:</h5>{data.portrayed}
-                            </p>
-                        </Typography>
-                    </CardContent>
-                </Card>
-
-            </div>
 
         </div>
 

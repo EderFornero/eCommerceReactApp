@@ -11,6 +11,10 @@ import styled from 'styled-components'
 import NavbarButton from './NavbarButton'
 import CartWidget from "../CartWidget/CartWidget";
 
+//Menu
+import Menu from './Menu'
+import HomeButton from './HomeButton'
+
 
 function Navbar() {
 
@@ -21,17 +25,16 @@ function Navbar() {
   return (
     <>
       <Nav>
-      <Link to='/home' className='font-header' style={{zIndex: 2}}><h2 style={{fontSize: '30px'}}>Beauty <span>&</span> Elegance</h2></Link>
+        <Link to='/' className='font-header' style={{ zIndex: 2 }}><h2 style={{ fontSize: '30px' }}>Beauty <span>&</span> Elegance</h2></Link>
 
 
         <div className={`items ${clicked ? 'active' : ''}`}>
-         
-          <Link to="/">Home</Link>
-          <Link to="/watch">Wristlet-Watch</Link>
-          <Link to="/handbag">Handbags</Link>
-          <Link to="/fragance">Fragrances</Link>
-          <Link to=""><CartWidget /></Link>
-          
+
+
+          <Link to="/"><HomeButton /></Link>
+          <Link to=""><Menu /></Link>
+          <Link to="/cart" className='cartWidget'><CartWidget /></Link>
+
         </div>
         <div className='menu'>
           <NavbarButton clicked={clicked} handleClick={getClick} />
@@ -60,17 +63,11 @@ h2{
    }
 }
 div{ 
-    a{ 
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 1rem;
-    color: #464646;
-    text-decoration: none;
-}
-  a:hover{
-    border-radius: 5px;
-    background-color: beige;
-    transition: .5s;
+
+  .cartWidget:hover{
+    background-color: #ece4a4;
   }
+  
 }
 .items{ 
   position: absolute;

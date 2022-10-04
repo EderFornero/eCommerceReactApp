@@ -2,16 +2,6 @@ body {
     background-color: beige;
 }
 
-@media (min-width: 890px) {
-    ion-icon {
-        color: #464646;
-        font-size: 30px;
-        position: absolute;
-        right: 1.5em;
-
-    }
-}
-
 ion-icon {
     color: #464646;
     font-size: 30px;
@@ -19,10 +9,6 @@ ion-icon {
 
 ion-icon:hover {
     color: black;
-    background-color: beige;
-    border-radius: 25%;
-    transition: all .5s;
-
 }
 
 .ul-category {
@@ -44,8 +30,6 @@ ion-icon:hover {
     background-color: #ece4a4;
     transition: all .8s;
 }
-
-
 
 .divCardItem {
     display: flex;
@@ -78,10 +62,6 @@ ion-icon:hover {
     align-items: center;
 }
 
-.div-properties {
-    display: flex;
-    align-items: flex-start;
-}
 
 .font-ty {
     font-family: Arial, Helvetica, sans-serif;
@@ -102,35 +82,18 @@ ion-icon:hover {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.cartViewImg{ 
+.cartViewImg {
     width: 300px;
     margin-left: 300px;
     max-height: 20em;
 }
 
-.cartViewDiv{ 
+.cartViewDiv {
     margin-right: 20px;
     text-align: center;
 }
 
-@media (max-width: 1015px){ 
-    .cartView{
-        display: block;
-        align-items: center;
-        margin-right: 20px;
-    }
-    .cartViewImg{ 
-        object-fit: contain;
-        min-height: 50vh;
-        width: 100%;
-        margin-left: 10px;
-    }
-    .cartViewDiv{
-        margin-left: 20px;
-        background-color: beige;
-    }
-   
-}
+
 
 .emptyCart {
     font-family: Arial, Helvetica, sans-serif;
@@ -149,12 +112,86 @@ ion-icon:hover {
     text-decoration: underline;
 }
 
-.spinner{
+.spinner {
     position: absolute;
     top: 50%;
     left: 50%;
 }
 
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.textField {
+    width: 400px;
+    margin: 10px;
+}
+
 .zIndex {
     z-index: -10;
+}
+
+
+
+
+
+
+@media (max-width: 1015px) {
+    .cartView {
+        display: block;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .cartViewImg {
+        object-fit: contain;
+        min-height: 50vh;
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .cartViewDiv {
+        margin-left: 38px;
+        background-color: beige;
+    }
+
+}
+
+
+@media (min-width: 890px) {
+    ion-icon {
+        color: #464646;
+        font-size: 30px;
+        position: absolute;
+        right: 1.5em;
+
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .textField {
+        width: auto;
+        margin: 10px;
+    }
+}
+
+
+@media (max-width: 415px){
+    .cartViewDivCount {
+       position: relative;
+       right: 60px;
+    }
+}
+
+@media (max-width: 600px){
+    .cartViewDivCount {
+       position: relative;
+       right: 45px;
+    }
 }
