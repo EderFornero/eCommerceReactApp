@@ -1,8 +1,8 @@
 # I'm Eder!
-# Welcome to my firts project using React Js 
+# Welcome to my first project using React Js 
 - [ ] Coderhouse course 
 
-# Libraries what I used
+# Libraries I used
 
 - [ ] Bootstrap 
 - [ ] Material UI 
