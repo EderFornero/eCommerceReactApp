@@ -1,5 +1,4 @@
-# I'm Eder!
-# Welcome to my first project using React Js 
+# eCommerce React App 
 - [ ] Coderhouse course 
 
 # Libraries I used
